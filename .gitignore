@@ -5,10 +5,6 @@ WebBanHangOnline/out/
 WebBanHangOnline/Debug/
 WebBanHangOnline/Release/
 
-# ASP.NET temp files
-App_Data/
-App_Start/
-
 # NuGet packages
 packages/*
 *.nupkg
