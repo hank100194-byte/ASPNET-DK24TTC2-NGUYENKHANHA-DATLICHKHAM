@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.EF.Order>
+@if (Model != null)
+{
+    var i = 1;
+    <h2>Lịch sử khám bệnh</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>STT</td>
+                 <td>Thời gian đến khám</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@item.Address</td>
+
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}

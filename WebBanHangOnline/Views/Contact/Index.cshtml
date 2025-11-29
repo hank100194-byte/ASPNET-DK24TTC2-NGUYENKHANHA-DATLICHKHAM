@@ -1,0 +1,84 @@
+﻿@model WebBanHangOnline.Models.EF.Contact
+@using WebBanHangOnline.Common
+@{
+    ViewBag.Title = "Đặt lịch khám";
+
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Đặt lịch</a></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="bs-stepper-content">
+                    @using (Html.BeginForm("Add", "Contact", FormMethod.Post, new { }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <!-- your steps content here -->
+                    <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Họ và Tên</label>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Số điện thoại</label>
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Email, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Vấn đề sức khỏe</label>
+                            @Html.TextBoxFor(x => x.Website, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Website, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Thời gian hẹn khám</label>
+                           
+                            <input type="date" name="Message" class="form-control" autocomplete="off" />
+                            @Html.ValidationMessageFor(x => x.Message, null, new { @class = "text-danger" })
+                        </div>
+                      
+
+                        <div class="form-group">
+                            <a href="/Home" class="btn btn-danger">Quay lại</a>
+                            <button name="Submit" type="Submit" onclick="hello()" class="btn btn-default">Đặt lịch khám</button>
+                        </div>
+                    </div>
+
+                    }
+
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <!-- Main Content -->
+
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function hello() {
+        alert("Đặt lịch thành công!!!");
+    }
+</script>
+
+
+
+@section scripts{
+    <script src="~/Content/assets/js/categories_custom.js"></script>
+}

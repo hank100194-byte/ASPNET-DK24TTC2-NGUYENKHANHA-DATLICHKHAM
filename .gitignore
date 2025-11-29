@@ -1,0 +1,36 @@
+# Build results
+WebBanHangOnline/bin/
+WebBanHangOnline/obj/
+WebBanHangOnline/out/
+WebBanHangOnline/Debug/
+WebBanHangOnline/Release/
+
+# ASP.NET temp files
+App_Data/
+App_Start/
+
+# NuGet packages
+packages/*
+*.nupkg
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Logs
+*.log
+
+# Publish output
+WebBanHangOnline/publish/
+WebBanHangOnline/wwwroot/
+
+# Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
